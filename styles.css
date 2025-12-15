@@ -1,0 +1,112 @@
+:root {
+    --color-primary: #8f2de4;
+    --color-secondary: #362744;
+    --color-tertiary: #2a2a2a;
+    font-size: 10px;
+}
+
+.allura-regular {
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow: auto;
+    position: absolute;
+    flex-direction: column;
+    font-size: 1.8rem;
+    display: relative;
+    align-items: center;
+}
+
+.background {
+    background-image: url('./images/logo.png');
+    background-size: auto 100vh;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    opacity: 25%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    flex-direction: column;
+    width: 60%;
+}
+
+header {
+    height: 20rem;
+    width: 100vw;
+    align-self: center;
+    justify-self: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    padding: 5px;
+    background-image: linear-gradient(var(--color-primary), var(--color-tertiary));
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
+
+.branding {
+    flex-direction: row;
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.branding img {
+    height: 15rem;
+}
+
+.branding h1 {
+    font-size: 10rem;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    padding: 15%;
+
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (width < 900px) {}
