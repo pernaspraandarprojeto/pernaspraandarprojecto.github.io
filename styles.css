@@ -5,6 +5,10 @@
     font-size: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 .allura-regular {
     font-family: "Allura", cursive;
     font-weight: 400;
@@ -61,7 +65,7 @@ body {
 
 .content {
     flex-direction: column;
-    width: 60%;
+    width: 90%;
 }
 
 header {
@@ -74,7 +78,7 @@ header {
 }
 
 header h1 {
-    padding: 5px;
+    padding: 0.5rem;
     background-image: linear-gradient(var(--color-primary), var(--color-tertiary));
     background-clip: text;
     color: transparent;
@@ -99,14 +103,63 @@ header h1 {
 section {
     height: 100vh;
     width: 100%;
-    padding: 15%;
-
+    padding: 0.5rem;
 }
 
 footer {
-    height: 50px;
+    height: 5rem;
     display: flex;
     flex-direction: row;
 }
 
-@media screen and (width < 900px) {}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+span {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: none;
+    box-shadow: 0 0 10px var(--color-primary);
+    background-color: rgba(143, 45, 228, 0.4);
+    height: 100%;
+    z-index: 9;
+}
+
+.prev {
+    position: relative;
+    top: 50%;
+    left: 0;
+}
+
+
+.next {
+    position: relative;
+    top: 50%;
+    left: 0;
+}
